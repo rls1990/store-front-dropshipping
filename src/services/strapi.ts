@@ -1,9 +1,9 @@
-const { STRAPI_HOST, STRAPI_TOKEN_READ_ONLY } = process.env;
+const { STRAPI_HOST, STRAPI_TOKEN } = process.env;
 
-export async function query(url: string) {
-  return await fetch(`${STRAPI_HOST}/api/${url}`, {
+export const query = async (url: string) => {
+  return fetch(`${STRAPI_HOST}/api/${url}`, {
     headers: {
-      Autorization: `Bearer ${STRAPI_TOKEN_READ_ONLY}`,
+      Authorization: `Bearer ${STRAPI_TOKEN}`,
     },
   }).then((res) => res.json());
-}
+};

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 interface TextSliderProps {
@@ -66,7 +67,16 @@ const TextSlider: React.FC<TextSliderProps> = ({
             : "translate-x-0 opacity-100"
         }`}
       >
-        {items[currentIndex].message}
+        <span className="inline-flex items-center justify-center gap-1">
+          <Image
+            width={400}
+            height={400}
+            className="w-[20px] h-[20px] text-white"
+            alt="image new"
+            src={items[currentIndex].icon}
+          />
+          {items[currentIndex].message}
+        </span>
       </div>
     </div>
   );
