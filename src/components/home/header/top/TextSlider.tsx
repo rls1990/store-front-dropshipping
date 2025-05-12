@@ -1,5 +1,6 @@
 "use client";
 
+import { ItemSlider } from "@/services/get-news";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -7,11 +8,6 @@ interface TextSliderProps {
   items: ItemSlider[];
   interval?: number;
   className?: string;
-}
-
-interface ItemSlider {
-  message: string;
-  icon: string;
 }
 
 const TextSlider: React.FC<TextSliderProps> = ({
@@ -59,7 +55,7 @@ const TextSlider: React.FC<TextSliderProps> = ({
   return (
     <div className={`relative min-w-[50%] h-[23px] ${className}`}>
       <div
-        className={`absolute top-1 transition-all duration-500 ease-in-out ${
+        className={`absolute transition-all duration-500 ease-in-out ${
           isAnimating
             ? direction === "left"
               ? "-translate-x-full opacity-0"
@@ -75,7 +71,7 @@ const TextSlider: React.FC<TextSliderProps> = ({
             alt="image new"
             src={items[currentIndex].icon}
           />
-          {items[currentIndex].message}
+          <p className="mt-1">{items[currentIndex].message}</p>
         </span>
       </div>
     </div>
