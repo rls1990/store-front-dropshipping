@@ -6,13 +6,13 @@ export interface ItemSlider {
 }
 
 export const GetNewsInfo = async () => {
-  return query(
-    "home?fields=id&populate[header][populate][news][populate][icon][fields]=url"
-  ).then((res) => {
-    const data: ItemSlider[] = res.data.header[0].news.map((item: any) => ({
-      message: item.message,
-      icon: `${process.env.STRAPI_HOST}${item.icon.url}`,
-    }));
-    return data;
-  });
+  return query("news?fields[0]=id&fields[1]=message&fields[2]=icon").then(
+    (res) => {
+      const data: ItemSlider[] = res.data.map((item: any) => ({
+        message: item.message,
+        icon: `${process.env.STRAPI_HOST}${item.icon}`,
+      }));
+      return data;
+    }
+  );
 };

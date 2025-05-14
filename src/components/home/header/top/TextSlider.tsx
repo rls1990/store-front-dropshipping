@@ -44,7 +44,7 @@ const TextSlider: React.FC<TextSliderProps> = ({
   // Si solo hay un texto, no necesitamos animación
   if (items.length === 1) {
     return (
-      <div className={`relative h-[23px] min-w-[50%] ${className}`}>
+      <div className={`relative h-[23px] ${className}`}>
         <div className="w-full text-left absolute top-1">
           {items[0].message}
         </div>
@@ -53,7 +53,7 @@ const TextSlider: React.FC<TextSliderProps> = ({
   }
 
   return (
-    <div className={`relative min-w-[50%] h-[23px] ${className}`}>
+    <div className={`relative h-[23px] ${className}`}>
       <div
         className={`absolute transition-all duration-500 ease-in-out ${
           isAnimating
