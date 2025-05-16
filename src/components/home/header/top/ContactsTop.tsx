@@ -22,7 +22,7 @@ const ContactsTop: FC<ContactsTopProps> = ({ items, className }) => {
             width={400}
             height={400}
             alt="image contact"
-            className="size-[24px]"
+            className="size-[20px]"
           />
           {item.value}
         </div>
