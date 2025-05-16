@@ -1,19 +1,21 @@
-import { GetNewsInfo } from "@/services/get-news";
 import TextSlider from "./TextSlider";
-import { GetSocialNetworks } from "@/services/get-social-networks";
 import SocialNetwoksTop from "./SocialNetwoksTop";
+import { getNewsInfo } from "@/services/get-news";
+import { getSocialNetworks } from "@/services/get-social-networks";
+import { getContact } from "@/services/get-contact";
+import ContactsTop from "./ContactsTop";
 
 const HeaderTop = async () => {
-  const news = await GetNewsInfo();
-  console.log(news);
-  const social_networks = await GetSocialNetworks();
+  const news = await getNewsInfo();
+  const social_networks = await getSocialNetworks();
+  const contacts = await getContact();
 
   return (
     <div className="bg-emerald-700 text-white text-xs py-2 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-x-4 ">
+      <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-x-3 ">
         <TextSlider items={news} className="hidden md:block" interval={7000} />
         <SocialNetwoksTop items={social_networks} />
-        <div>asdsad</div>
+        <ContactsTop items={contacts} />
       </div>
     </div>
   );

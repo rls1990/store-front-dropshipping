@@ -5,7 +5,7 @@ export interface ItemSlider {
   icon: string;
 }
 
-export const GetNewsInfo = async () => {
+export const getNewsInfo = async () => {
   return query("news?fields[0]=id&fields[1]=message&fields[2]=icon").then(
     (res) => {
       const data: ItemSlider[] = res.data.map((item: any) => ({

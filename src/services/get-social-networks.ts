@@ -7,7 +7,7 @@ export interface SocialNetworksData {
   url: string;
 }
 
-export const GetSocialNetworks = async () => {
+export const getSocialNetworks = async () => {
   return query(
     "social-networks?fields[0]=id&fields[1]=name&fields[2]=icon&fields[3]=url"
   ).then((res) => {
@@ -17,7 +17,6 @@ export const GetSocialNetworks = async () => {
         icon: `${process.env.STRAPI_HOST}${item.icon}`,
       })
     );
-    console.log(data);
     return data;
   });
 };
