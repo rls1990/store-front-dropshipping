@@ -11,7 +11,7 @@ const HeaderTop = async () => {
   const contacts = await getContact();
 
   return (
-    <div className="bg-gradient-to-br from-primary via-violet-800 to-primary-ligth text-white text-xs py-2 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-tr from-primary via-emerald-700 to-primary-light text-white text-xs py-2 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-x-3 ">
         <TextSlider items={news} className="hidden md:block" interval={7000} />
         <SocialNetwoksTop items={social_networks} />

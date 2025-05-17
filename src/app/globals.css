@@ -1,8 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #041b69;
-  --color-primary-ligth: #2960b3;
+  /* Colores principales */
+  /* --color-primary: #4b2972; */
+  --color-primary: #05724f;
+  --color-primary-light: #0c9e70;
+
+  /* Colores secundarios (complementarios) */
+  --color-secondary: #ff7e33; /* Naranja coral - complementa el verde */
+  --color-secondary-light: #ff9e5c;
+  --color-secondary-dark: #e5671a;
+
+  /* Colores neutros */
+  --color-neutral-light: #f5f7f6; /* Blanco con tono verde muy suave */
+  --color-neutral: #d1d9d6; /* Gris verdoso claro */
+  --color-neutral-dark: #6b7974; /* Gris verdoso oscuro */
+  --color-neutral-darker: #2d3835; /* Casi negro con tono verde */
+
+  /* Colores de acento/advertencia */
+  --color-accent: #3a86ff; /* Azul brillante para llamar la atención */
+  --color-error: #e63946; /* Rojo coral para errores */
 }
 
 html {
