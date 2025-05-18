@@ -15,7 +15,6 @@ export const getContact = async () => {
       value: item.value,
       icon: `${process.env.STRAPI_HOST}${item.icon}`,
     }));
-    console.log(data);
     return data;
   });
 };
