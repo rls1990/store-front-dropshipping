@@ -13,7 +13,7 @@ const NavBar = () => {
               src={`http://localhost:1337/uploads/logo_07c16a4f0d.png`}
               width={500}
               height={500}
-              className="w-[140px] h-[90%]"
+              className="w-[140px] h-[85%]"
             />
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
