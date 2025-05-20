@@ -13,19 +13,27 @@ export default function DynamicSVG({
   const [classSvg, setClassSvg] = useState("");
 
   useEffect(() => {
+    const arr_cn = className?.split(" ");
+    let res = "";
+    arr_cn?.forEach((item) => {
+      res += `[&_svg]:${item} `;
+    });
+    setClassSvg(res);
+  }, []);
+
+  useEffect(() => {
     fetch(url)
       .then((res) => res.text())
       .then((svg) => {
-        setSvgContent(svg);
         const arr_cn = className?.split(" ");
         let res = "";
         arr_cn?.forEach((item) => {
           res += `[&_svg]:${item} `;
         });
-        setClassSvg(res);
+        setSvgContent(svg);
       })
       .catch((err) => console.error("Error loading SVG:", err));
-  }, [url]);
+  }, [classSvg, url]);
 
   return (
     <div

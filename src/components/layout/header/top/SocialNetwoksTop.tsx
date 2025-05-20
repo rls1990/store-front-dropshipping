@@ -16,7 +16,7 @@ const SocialNetwoksTop: FC<SocialNetwoksTopProps> = ({ items, className }) => {
         <div key={item.id + Date.now()} className="group relative">
           <a href={item.url}>
             <Image
-              src={item.icon}
+              src={item.image}
               width={400}
               height={400}
               className="w-[20px] h-[20px]"
