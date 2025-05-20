@@ -31,7 +31,7 @@ const NavBar = () => {
               src={`http://localhost:1337/uploads/logo_07c16a4f0d.png`}
               width={500}
               height={500}
-              className="w-[125px] h-[77%]"
+              className="w-[140px] h-[88%]"
             />
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -52,12 +52,12 @@ const NavBar = () => {
             <button
               type="button"
               id="mobile-menu-button"
-              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500 cursor-pointer"
+              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-transparent cursor-pointer"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               <span className="sr-only">Abrir menú principal</span>
               <svg
-                className="block h-6 w-6"
+                className={`h-6 w-6 ${!menuOpen ? "block" : "hidden"}`}
                 id="menu-open-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -73,7 +73,7 @@ const NavBar = () => {
                 />
               </svg>
               <svg
-                className="hidden h-6 w-6"
+                className={`h-6 w-6 ${menuOpen ? "block" : "hidden"}`}
                 id="menu-close-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
