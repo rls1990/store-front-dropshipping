@@ -7,6 +7,9 @@ import ContactsTop from "./ContactsTop";
 
 const HeaderTop = async () => {
   const news = await getNewsInfo();
+
+  console.log(news);
+
   const social_networks = await getSocialNetworks();
   const contacts = await getContact();
 
