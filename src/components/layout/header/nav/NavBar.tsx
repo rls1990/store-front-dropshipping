@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Logo from "./Logo";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -24,16 +25,17 @@ const NavBar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
+          {/* <div className="flex-shrink-0 flex items-center">
             <Image
               alt="log image"
               priority
-              src={`http://localhost:1337/uploads/logo_07c16a4f0d.png`}
+              src={`http://localhost:1337/uploads/logo1_6cb582cf09.png`}
               width={500}
               height={500}
-              className="w-[140px] h-[88%]"
+              className="w-[57px] h-[50px] "
             />
-          </div>
+          </div> */}
+          <Logo />
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
             {navItems.map((item, index) => (
               <Link

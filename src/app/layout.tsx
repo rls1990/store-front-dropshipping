@@ -3,6 +3,7 @@ import "./globals.css";
 import HeaderTop from "@/components/layout/header/top/HeaderTop";
 import NavBar from "@/components/layout/header/nav/NavBar";
 import Footer from "@/components/layout/footer/Footer";
+import NavBar1 from "@/components/layout/header/nav/NavBar1";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +22,7 @@ export default function RootLayout({
       >
         <header>
           <HeaderTop />
-          <NavBar />
+          <NavBar1 />
         </header>
         {children}
         <Footer />
