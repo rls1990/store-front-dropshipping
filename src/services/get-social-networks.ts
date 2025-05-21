@@ -9,7 +9,6 @@ export interface SocialNetworksData {
 
 export interface SocialNetworksResponse {
   id: string;
-  documentId: string;
   name: string;
   url: string;
   image: Image;
@@ -17,7 +16,6 @@ export interface SocialNetworksResponse {
 
 export interface Image {
   id: number;
-  documentId: string;
   url: string;
 }
 
