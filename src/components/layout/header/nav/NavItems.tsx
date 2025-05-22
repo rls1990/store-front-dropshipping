@@ -107,7 +107,7 @@ const NavItems = () => {
               key={index + Date.now()}
               href={item.url}
               className={
-                "block pl-3 pr-4 py-2 border-l-4 text-base font-medium slide-left" +
+                "block pl-3 pr-4 py-2 border-l-4 text-base font-medium fade-in" +
                 selectItemCell(item.url)
               }
             >
