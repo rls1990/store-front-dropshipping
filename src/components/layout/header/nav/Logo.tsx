@@ -11,7 +11,7 @@ const Logo = async () => {
         src={logoInfo.image}
         width={500}
         height={500}
-        className="w-[57px] h-[53px] "
+        className="w-[57px] h-[53px]"
       />
       <div>
         <span className="font-bold text-emerald-800 text-[27px] relative -left-[6px] top-[2px] uppercase">

@@ -20,10 +20,8 @@ export default function RootLayout({
       <body
         className={`bg-gray-100 grid grid-rows-[auto_1fr_auto] min-h-[100dvh] antialiased`}
       >
-        <header>
-          <HeaderTop />
-          <NavBar1 />
-        </header>
+        <HeaderTop />
+        <NavBar1 />
         {children}
         <Footer />
       </body>

@@ -97,7 +97,7 @@ const NavItems = () => {
       ></div>
 
       <div
-        className={`fixed top-30 left-0 w-full sm:hidden ${
+        className={`absolute left-0 w-full top-15 sm:hidden ${
           !menuOpen && "hidden"
         }`}
       >
