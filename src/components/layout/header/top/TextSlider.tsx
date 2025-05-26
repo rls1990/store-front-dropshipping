@@ -55,7 +55,7 @@ const TextSlider: React.FC<TextSliderProps> = ({
   return (
     <div className={`relative h-[23px] ${className}`}>
       <div
-        className={`absolute transition-all duration-500 ease-in-out ${
+        className={`absolute w-full text-center transition-all duration-500 ease-in-out ${
           isAnimating
             ? direction === "left"
               ? "-translate-x-full opacity-0"

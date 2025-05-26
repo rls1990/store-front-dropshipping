@@ -9,9 +9,7 @@ interface SocialNetwoksTopProps {
 
 const SocialNetwoksTop: FC<SocialNetwoksTopProps> = ({ items, className }) => {
   return (
-    <div
-      className={`inline-flex items-center justify-center gap-4 ${className}`}
-    >
+    <div className={`items-center justify-center gap-4 ${className}`}>
       {items.map((item) => (
         <div key={item.id + Date.now()} className="group relative">
           <a href={item.url}>
