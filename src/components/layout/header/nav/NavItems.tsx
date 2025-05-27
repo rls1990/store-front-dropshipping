@@ -75,7 +75,7 @@ const NavItems = () => {
           <div className="flex flex-col items-center sm:flex-row text-center h-full">
             {navItems.map((item, index) => (
               <Link
-                key={index + Date.now()}
+                key={index + item.name}
                 href={item.url}
                 className={
                   "hover:border-gray-300 hover:text-gray-800 font-medium l inline-flex items-center justify-center px-1 pt-1 border-b-3 text-sm h-full w-22" +
@@ -104,7 +104,7 @@ const NavItems = () => {
         <div className="pt-2 pb-3 space-y-1 w-full">
           {navItems.map((item, index) => (
             <Link
-              key={index + Date.now()}
+              key={index + item.name + "cell"}
               href={item.url}
               className={
                 "block pl-3 pr-4 py-2 border-l-4 text-base font-medium fade-in" +
