@@ -1,4 +1,4 @@
-import TextSlider from "./TextSlider";
+import TextSlider from "../../../ui/sliders/TextSlider";
 import SocialNetwoksTop from "./SocialNetwoksTop";
 import { getNewsInfo } from "@/services/get-news";
 import { getSocialNetworks } from "@/services/get-social-networks";
