@@ -1,5 +1,5 @@
 const ProductView = () => {
-  return <div className="h-screen">ProductView</div>;
+  return <div>ProductView</div>;
 };
 
 export default ProductView;

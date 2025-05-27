@@ -1,5 +1,5 @@
 const OffersVew = () => {
-  return <div className="h-screen">OffersVew</div>;
+  return <div>OffersVew</div>;
 };
 
 export default OffersVew;

@@ -1,5 +1,11 @@
+import Container from "../ui/container/Container";
+
 const Home = () => {
-  return <div className="h-screen">Home</div>;
+  return (
+    <div>
+      <Container>Home</Container>
+    </div>
+  );
 };
 
 export default Home;
