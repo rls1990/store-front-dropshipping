@@ -1,5 +1,5 @@
 const AboutUsView = () => {
-  return <div>AboutUsView</div>;
+  return <div className="h-screen">AboutUsView</div>;
 };
 
 export default AboutUsView;

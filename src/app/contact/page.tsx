@@ -1,5 +1,5 @@
 const ContactView = () => {
-  return <div>ContactView</div>;
+  return <div className="h-screen">ContactView</div>;
 };
 
 export default ContactView;
