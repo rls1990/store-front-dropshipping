@@ -8,4 +8,5 @@ export const navItems: NavItemsType[] = [
   { name: "Productos", url: "/products" },
   { name: "Ofertas", url: "/offers" },
   { name: "Contacto", url: "/contact" },
+  { name: "About Us", url: "/about-us" },
 ];

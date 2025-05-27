@@ -92,7 +92,7 @@ const NavItems = () => {
       {/* cell */}
       <div
         className={`sm:hidden overflow-y-hidden transition-all  ${
-          menuOpen ? "h-47" : "h-0"
+          menuOpen ? "h-60" : "h-0"
         }`}
       ></div>
 
