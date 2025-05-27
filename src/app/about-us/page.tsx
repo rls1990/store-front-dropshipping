@@ -1,5 +1,11 @@
+import AboutUs from "@/components/about-us/AboutUs";
+
 const AboutUsView = () => {
-  return <div className="h-screen">AboutUsView</div>;
+  return (
+    <div>
+      <AboutUs />
+    </div>
+  );
 };
 
 export default AboutUsView;

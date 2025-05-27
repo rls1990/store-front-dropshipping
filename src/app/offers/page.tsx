@@ -1,5 +1,11 @@
+import Offers from "@/components/offers/Offers";
+
 const OffersVew = () => {
-  return <div>OffersVew</div>;
+  return (
+    <div>
+      <Offers />
+    </div>
+  );
 };
 
 export default OffersVew;
