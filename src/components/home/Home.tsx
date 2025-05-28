@@ -4,7 +4,7 @@ import SliderHero from "../ui/sliders/SliderHero";
 const Home = () => {
   return (
     <div>
-      <SliderHero />
+      <SliderHero items={["a", "b", "c"]} />
       <Container>Home</Container>
     </div>
   );
