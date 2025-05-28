@@ -41,9 +41,6 @@ const SliderHero: FC<SliderHeroProps> = ({ items, className }) => {
 
       {/*Progress Indicators */}
       <span className="absolute bottom-0 w-full flex items-center justify-center gap-3">
-        {/* <button className="p-2 bg-gray-400 rounded-full border-gray-200 border-2 hover:bg-gray-400 cursor-pointer transition-transform"></button>
-        <button className="p-1 bg-gray-300 rounded-full border-gray-200 border-2 hover:bg-gray-400 hover:scale-150 cursor-pointer transition-transform"></button> */}
-
         {items.map((_item, index) => (
           <button
             key={index + "progi"}
@@ -56,6 +53,10 @@ const SliderHero: FC<SliderHeroProps> = ({ items, className }) => {
           />
         ))}
       </span>
+
+      <div className="w-full h-full flex items-center justify-center">
+        <div>{items[currentIndex]}</div>
+      </div>
     </div>
   );
 };
