@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import LeftArrow from "./icons/LeftArrow";
 import RightArrow from "./icons/RightArrow";
 import { ItemSlider } from "@/services/get-slider-hero-items";
@@ -13,18 +13,38 @@ interface SliderHeroProps {
   className?: string;
 }
 
-const SliderHero: FC<SliderHeroProps> = ({ items, className }) => {
+const SliderHero: FC<SliderHeroProps> = ({
+  items,
+  className,
+  interval = 5000,
+}) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const nextIndex = () => {
-    if (currentIndex + 1 == items.length) setCurrentIndex(0);
-    else setCurrentIndex(currentIndex + 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === items.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevIndex = () => {
-    if (currentIndex == 0) setCurrentIndex(items.length - 1);
-    else setCurrentIndex(currentIndex - 1);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    );
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === items.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 1000);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [items.length, interval]);
+
+  if (!items || items.length === 0) return null;
 
   return (
     <div className="h-[80vh] relative bg-gray-50">
