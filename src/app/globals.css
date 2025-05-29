@@ -55,6 +55,23 @@ body {
   animation-delay: 200ms;
 }
 
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Clase para aplicar la animación */
+.slide-right {
+  animation: slideRight 0.2s ease-out both;
+  animation-delay: 200ms;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

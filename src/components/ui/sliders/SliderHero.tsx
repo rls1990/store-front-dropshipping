@@ -27,20 +27,20 @@ const SliderHero: FC<SliderHeroProps> = ({ items, className }) => {
     <div className="h-[70vh] relative bg-gray-100">
       {/* left right buttons */}
       <button
-        className="cursor-pointer transition-all active:scale-90 m-3 rounded-2xl absolute right-0 rotate-90 top-[30%] sm:right-auto sm:top-[40%] sm:rotate-0 opacity-70 hover:opacity-90"
-        onClick={nextIndex}
+        className="cursor-pointer transition-all active:scale-90 m-3 rounded-2xl absolute right-0 -rotate-90 top-[55%] sm:right-auto sm:top-[40%] sm:rotate-0 opacity-70 hover:opacity-90"
+        onClick={prevIndex}
       >
         <LeftArrow className="size-12 sm:w-15 sm:h-27" />
       </button>
       <button
-        className="cursor-pointer transition-all   active:scale-90 m-3 rounded-2xl absolute right-0 rotate-90 top-[50%] sm:right-0 sm:top-[40%] sm:rotate-0 opacity-70 hover:opacity-90"
-        onClick={prevIndex}
+        className="cursor-pointer transition-all   active:scale-90 m-3 rounded-2xl absolute right-0 -rotate-90 top-[40%] sm:right-0 sm:top-[40%] sm:rotate-0 opacity-70 hover:opacity-90"
+        onClick={nextIndex}
       >
         <RightArrow className="size-12 sm:w-15 sm:h-27" />
       </button>
 
       {/*Progress Indicators */}
-      <span className="absolute bottom-0 w-full flex items-center justify-center gap-3">
+      <span className="absolute bottom-4 w-full flex items-center justify-center gap-3">
         {items.map((_item, index) => (
           <button
             key={index + "progi"}
@@ -55,7 +55,9 @@ const SliderHero: FC<SliderHeroProps> = ({ items, className }) => {
       </span>
 
       <div className="w-full h-full flex items-center justify-center">
-        <div>{items[currentIndex]}</div>
+        <div key={Date.now()} className="fade-in">
+          {items[currentIndex]}
+        </div>
       </div>
     </div>
   );
