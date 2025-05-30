@@ -6,6 +6,7 @@ import RightArrow from "./icons/RightArrow";
 import { ItemSlider } from "@/services/get-slider-hero-items";
 import Image from "next/image";
 import Link from "next/link";
+import ProductIcon from "./icons/ProductIcon";
 
 interface SliderHeroProps {
   items: ItemSlider[];
@@ -102,10 +103,13 @@ const SliderHero: FC<SliderHeroProps> = ({
             </p>
 
             <Link
-              className="p-3 mt-3 bg-primary hover:bg-primary-light active:shadow-md active:scale-95 transition-all text-gray-50 rounded-lg w-60 text-center shadow-xl"
+              className="p-2 mt-3 bg-primary hover:bg-primary-light active:shadow-md active:scale-95 transition-all text-gray-50 rounded-lg w-auto px-10 text-center shadow-lg"
               href={items[currentIndex].route}
             >
-              Ver Producto
+              <span className="inline-flex items-center justify-center gap-2 pt-1">
+                <ProductIcon />
+                <span className="pt-1">Ver Producto</span>
+              </span>
             </Link>
           </div>
         </div>
