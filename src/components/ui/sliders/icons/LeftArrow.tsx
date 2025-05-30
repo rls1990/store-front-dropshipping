@@ -14,7 +14,7 @@ const LeftArrow: FC<LeftArrowProps> = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
       transform="rotate(0)"
       className={
-        "[&_path]:stroke-gray-500/90 hover:[&_path]:stroke-gray-500/70 " +
+        "[&_path]:stroke-gray-400/90 hover:[&_path]:stroke-gray-500/70 " +
         className
       }
     >

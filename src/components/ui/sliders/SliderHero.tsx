@@ -16,7 +16,7 @@ interface SliderHeroProps {
 const SliderHero: FC<SliderHeroProps> = ({
   items,
   className,
-  interval = 5000,
+  interval = 7000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
