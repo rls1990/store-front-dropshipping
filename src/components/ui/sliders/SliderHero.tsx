@@ -17,7 +17,7 @@ interface SliderHeroProps {
 const SliderHero: FC<SliderHeroProps> = ({
   items,
   className,
-  interval = 7000,
+  interval = 10000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -83,12 +83,12 @@ const SliderHero: FC<SliderHeroProps> = ({
           key={Date.now()}
           className="fade-in w-full grid grid-cols-1 justify-items-center lg:grid-cols-2 overflow-x-hidden"
         >
-          <div className="lg:flex lg:justify-end lg:w-full">
+          <div className="lg:flex lg:justify-end lg:w-full overflow-hidden mask-x-from-95% mask-y-from-95%">
             <Image
               src={items[currentIndex].image}
               width={400}
               height={400}
-              className="h-[270px] md:h-[300px] lg:h-[350px] w-auto mask-x-from-95% mask-y-from-95% slide-right"
+              className="h-[270px] md:h-[300px] lg:h-[350px] w-auto mask-x-from-95% mask-y-from-95% slide-right-zoom"
               alt={items[currentIndex].title}
             />
           </div>

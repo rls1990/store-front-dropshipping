@@ -22,7 +22,7 @@ const ProductIcon = () => {
         <title />
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           id="页面-1"
           stroke="none"
           strokeWidth="1"
