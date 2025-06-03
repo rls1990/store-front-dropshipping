@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { query } from "./strapi";
 
 export interface ItemSlider {
@@ -9,10 +10,10 @@ export interface ItemSlider {
 export interface ItemSliderResponse {
   id: string;
   message: string;
-  image: Image;
+  image: ImageRes;
 }
 
-export interface Image {
+export interface ImageRes {
   id: string;
   url: string;
 }
