@@ -70,29 +70,43 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
       <button
         className="cursor-pointer transition-all active:scale-90 m-3 rounded-2xl absolute right-0 -rotate-90 top-[55%] sm:right-auto sm:top-[40%] sm:rotate-0 opacity-70 z-40"
         onClick={prevIndex}
+        disabled={
+          images && images.current && images.current.length > 0 ? false : true
+        }
       >
         <LeftArrow className="size-12 sm:w-15 sm:h-27" />
       </button>
       <button
         className="cursor-pointer transition-all   active:scale-90 m-3 rounded-2xl absolute right-0 -rotate-90 top-[40%] sm:right-0 sm:top-[40%] sm:rotate-0 opacity-70 hover:opacity-90 z-40"
         onClick={nextIndex}
+        disabled={
+          images && images.current && images.current.length > 0 ? false : true
+        }
       >
         <RightArrow className="size-12 sm:w-15 sm:h-27" />
       </button>
 
       {/*Progress Indicators */}
       <span className="absolute bottom-4 w-full flex items-center justify-center gap-3 z-40">
-        {items.map((_item, index) => (
-          <button
-            key={index + "progi"}
-            className={
-              index == currentIndex
-                ? "p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 hover:bg-gray-400 cursor-pointer transition-all"
-                : "p-1 bg-gray-300 rounded-full border-gray-200 border-2 hover:bg-gray-400 hover:scale-150 cursor-pointer transition-all"
-            }
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
+        {images && images.current && images.current?.length > 0 ? (
+          items.map((_item, index) => (
+            <button
+              key={index + "progi"}
+              className={
+                index == currentIndex
+                  ? "p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 hover:bg-gray-400 cursor-pointer transition-all"
+                  : "p-1 bg-gray-300 rounded-full border-gray-200 border-2 hover:bg-gray-400 hover:scale-150 cursor-pointer transition-all"
+              }
+              onClick={() => setCurrentIndex(index)}
+            />
+          ))
+        ) : (
+          <>
+            <div className="p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
+            <div className="p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
+            <div className="p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
+          </>
+        )}
       </span>
 
       {images && images.current && images.current?.length > 0 ? (
@@ -128,7 +142,7 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
         </div>
       ) : (
         <div className="w-full h-full flex items-center justify-center">
-          <div className="bg-gray-500 w-[50%] h-[50%] rounded-lg animate-pulse"></div>
+          <div className="bg-gray-300 w-[50%] h-[50%] rounded-lg animate-pulse"></div>
         </div>
       )}
     </div>
