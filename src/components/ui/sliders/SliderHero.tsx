@@ -26,7 +26,7 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
           src={item.image}
           width={400}
           height={400}
-          className="h-[270px] md:h-[300px] lg:h-[350px] w-auto mask-x-from-95% mask-y-from-95% slide-right-zoom"
+          className="h-[240px] md:h-[290px] lg:h-[350px] w-auto mask-x-from-95% mask-y-from-95% slide-right-zoom"
           alt={items[currentIndex].title}
         />
       );
@@ -65,7 +65,7 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="h-[80vh] relative bg-gray-50">
+    <div className="h-[83vh] relative bg-gradient-to-r from-emerald-500 to-teal-600">
       {/* left right buttons */}
       <button
         className="cursor-pointer transition-all active:scale-90 m-3 rounded-2xl absolute right-0 -rotate-90 top-[55%] sm:right-auto sm:top-[40%] sm:rotate-0 opacity-70 z-40"
@@ -94,17 +94,17 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
               key={index + "progi"}
               className={
                 index == currentIndex
-                  ? "p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 hover:bg-gray-400 cursor-pointer transition-all"
-                  : "p-1 bg-gray-300 rounded-full border-gray-200 border-2 hover:bg-gray-400 hover:scale-150 cursor-pointer transition-all"
+                  ? "p-1 scale-200 bg-gray-300 rounded-full hover:bg-gray-200 cursor-pointer transition-all"
+                  : "p-1 bg-gray-300 rounded-full hover:bg-gray-200 hover:scale-150 cursor-pointer transition-all"
               }
               onClick={() => setCurrentIndex(index)}
             />
           ))
         ) : (
           <>
-            <div className="p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
-            <div className="p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
-            <div className="p-1 scale-200 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
+            <div className="p-1 bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
+            <div className="bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
+            <div className="bg-gray-400 rounded-full border-gray-200 border-2 animate-pulse" />
           </>
         )}
       </span>
@@ -120,16 +120,16 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
             </div>
 
             <div className="flex flex-col items-center justify-center lg:items-baseline lg:w-full lg:pl-12 slide-left">
-              <h1 className="text-2xl lg:text-3xl font-semibold text-gray-700 ">
+              <h1 className="text-2xl lg:text-4xl font-semibold text-gray-100">
                 {items[currentIndex].title}
               </h1>
 
-              <p className="text-sm text-gray-900 text-center w-[40ch] lg:w-[50ch] lg:text-left">
+              <p className="text-sm text-gray-100 text-center w-[40ch] lg:w-[50ch] lg:text-left">
                 {items[currentIndex].subtitle}
               </p>
 
               <Link
-                className="p-2 mt-3 bg-primary hover:bg-primary-light active:shadow-md active:scale-95 transition-all text-gray-50 rounded-lg w-auto px-10 text-center shadow-lg"
+                className="inline-block bg-gray-100 text-emerald-600 font-semibold py-2 px-5 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out text-lg mt-7"
                 href={items[currentIndex].route}
               >
                 <span className="inline-flex items-center justify-center gap-2 pt-1">
@@ -142,7 +142,7 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
         </div>
       ) : (
         <div className="w-full h-full flex items-center justify-center">
-          <div className="bg-gray-300 w-[50%] h-[50%] rounded-lg animate-pulse"></div>
+          <div className="bg-gray-300 w-[40%] h-[50%] rounded-lg animate-pulse"></div>
         </div>
       )}
     </div>

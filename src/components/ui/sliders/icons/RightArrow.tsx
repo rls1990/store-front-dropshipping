@@ -14,8 +14,7 @@ const RightArrow: FC<RightArrowProps> = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
       transform="rotate(180)"
       className={
-        "[&_path]:stroke-gray-400/90 hover:[&_path]:stroke-gray-500/70 " +
-        className
+        "[&_path]:stroke-gray-200/90 hover:[&_path]:stroke-gray-50 " + className
       }
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />

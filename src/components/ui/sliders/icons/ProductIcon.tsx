@@ -8,7 +8,7 @@ const ProductIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       fill="#000000"
-      className="size-[27px] "
+      className="size-[24px]"
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
@@ -42,6 +42,7 @@ const ProductIcon = () => {
                 stroke="#ebebeb"
                 strokeLinejoin="round"
                 strokeWidth="1.5"
+                className="stroke-emerald-600"
               />
               <line
                 id="路径"
@@ -53,6 +54,7 @@ const ProductIcon = () => {
                 x2="12"
                 y1="7"
                 y2="12"
+                className="stroke-emerald-600"
               />
               <line
                 id="路径"
@@ -64,6 +66,7 @@ const ProductIcon = () => {
                 x2="12"
                 y1="22"
                 y2="12"
+                className="stroke-emerald-600"
               />
               <line
                 id="路径"
@@ -75,6 +78,7 @@ const ProductIcon = () => {
                 x2="12"
                 y1="7"
                 y2="12"
+                className="stroke-emerald-600"
               />
               <line
                 id="路径"
@@ -86,6 +90,7 @@ const ProductIcon = () => {
                 x2="7"
                 y1="4.5"
                 y2="9.5"
+                className="stroke-emerald-600"
               />
             </g>
           </g>
