@@ -1,6 +1,7 @@
 import { getSliderItemsHero } from "@/services/get-slider-hero-items";
 import Container from "../ui/container/Container";
 import SliderHero from "../ui/sliders/SliderHero";
+import ProductsSection from "../products/ProductsSection";
 
 const Home = async () => {
   const sliderItemsHero = await getSliderItemsHero();
@@ -8,7 +9,9 @@ const Home = async () => {
   return (
     <div>
       <SliderHero items={sliderItemsHero} />
-      <Container>Home</Container>
+      <Container>
+        <ProductsSection />
+      </Container>
     </div>
   );
 };

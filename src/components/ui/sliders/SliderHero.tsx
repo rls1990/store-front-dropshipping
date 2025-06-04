@@ -26,7 +26,7 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
           src={item.image}
           width={400}
           height={400}
-          className="h-[240px] md:h-[290px] lg:h-[350px] w-auto mask-x-from-95% mask-y-from-95% slide-right-zoom"
+          className="h-[240px] md:h-[290px] lg:h-[400px] w-auto mask-x-from-95% mask-y-from-95% slide-right-zoom"
           alt={items[currentIndex].title}
         />
       );
@@ -65,7 +65,7 @@ const SliderHero: FC<SliderHeroProps> = ({ items, interval = 10000 }) => {
   if (!items || items.length === 0) return null;
 
   return (
-    <div className="h-[83vh] relative bg-gradient-to-r from-emerald-500 to-teal-600">
+    <div className="h-[83vh] lg:h-[73vh] relative bg-gradient-to-r from-emerald-500 to-teal-600">
       {/* left right buttons */}
       <button
         className="cursor-pointer transition-all active:scale-90 m-3 rounded-2xl absolute right-0 -rotate-90 top-[55%] sm:right-auto sm:top-[40%] sm:rotate-0 opacity-70 z-40"
