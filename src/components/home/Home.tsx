@@ -11,7 +11,6 @@ const Home = async () => {
       <SliderHero items={sliderItemsHero} />
       <Container>
         <ProductsSection />
-        <div>asd</div>
       </Container>
     </div>
   );

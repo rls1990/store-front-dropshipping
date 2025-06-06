@@ -5,6 +5,7 @@ import ChevronDownIcon from "./icons/ChevronDownIcon";
 import FilterIcon from "./icons/FilterIcon";
 import Select from "../ui/fields/select/Select";
 import ColorSelect from "../ui/fields/color/ColorSelect";
+import { PriceRange } from "../ui/fields/range/PriceRange";
 
 const ProductsSection = () => {
   const [openMenuFulter, setOpenMenuFulter] = useState(false);
@@ -69,19 +70,12 @@ const ProductsSection = () => {
 
             <ColorSelect listcolors={["rojo", "azul", "verde", "blanco"]} />
 
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Rango de Precio
-              </label>
-              <input
-                type="range"
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
-              />
-              <div className="flex justify-between text-xs text-gray-500 mt-1">
-                <span>$0</span>
-                <span>$1000+</span>
-              </div>
-            </div>
+            <PriceRange
+              min={0}
+              max={5000}
+              step={10}
+              onChange={(range) => console.log(range)}
+            />
 
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">
