@@ -54,7 +54,7 @@ const ProductsSection = () => {
 
         <div
           className={
-            "w-full  border border-gray-200 bg-white shadow-xl rounded-lg transition-all duration-300 overflow-auto" +
+            "w-full  border border-gray-200 bg-white shadow-xl rounded-lg transition-all duration-300 overflow-auto sm:overflow-hidden" +
             `${openMenuFulter ? " scale-100 h-100 md:h-80" : " scale-0 h-0"}`
           }
         >
@@ -67,21 +67,7 @@ const ProductsSection = () => {
               items={["Más Reciente", "Más Antiguo"]}
             />
 
-            {/* <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Color
-              </label>
-              <div className="flex flex-wrap gap-2">
-                <button className="h-6 w-6 rounded-full border border-gray-300 bg-red-500 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-red-400"></button>
-                <button className="h-6 w-6 rounded-full border border-gray-300 bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-400"></button>
-                <button className="h-6 w-6 rounded-full border border-gray-300 bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-green-400"></button>
-                <button className="h-6 w-6 rounded-full border border-gray-300 bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-yellow-300"></button>
-                <button className="h-6 w-6 rounded-full border border-gray-300 bg-black focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-500"></button>
-                <button className="h-6 w-6 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-300"></button>
-              </div>
-            </div> */}
-
-            <ColorSelect />
+            <ColorSelect listcolors={["rojo", "azul", "verde", "blanco"]} />
 
             <div>
               <label className="block text-xs font-medium text-gray-600 mb-1">
