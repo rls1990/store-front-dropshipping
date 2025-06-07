@@ -1,12 +1,12 @@
 "use client";
 
 import { FC, ReactNode, useEffect, useRef, useState } from "react";
-import LeftArrow from "./icons/LeftArrow";
-import RightArrow from "./icons/RightArrow";
+import LeftArrow from "../icons/LeftArrow";
+import RightArrow from "../icons/RightArrow";
 import { ItemSlider } from "@/services/get-slider-hero-items";
 import Image from "next/image";
 import Link from "next/link";
-import ProductIcon from "./icons/ProductIcon";
+import ProductIcon from "../icons/ProductIcon";
 
 interface SliderHeroProps {
   items: ItemSlider[];

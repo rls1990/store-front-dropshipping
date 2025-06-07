@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import StarIcon from "./icons/StarIcon";
+import StarIcon from "../../icons/StarIcon";
 
 interface RatingProps {
   initialRating?: number;

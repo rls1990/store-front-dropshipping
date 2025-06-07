@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import ChevronDownIcon from "./icons/ChevronDownIcon";
-import FilterIcon from "./icons/FilterIcon";
+import ChevronDownIcon from "../ui/icons/ChevronDownIcon";
+import FilterIcon from "../ui/icons/FilterIcon";
 import Select from "../ui/fields/select/Select";
 import ColorSelect from "../ui/fields/color/ColorSelect";
 import { PriceRange } from "../ui/fields/range/PriceRange";
