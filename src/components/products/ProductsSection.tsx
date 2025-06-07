@@ -6,6 +6,7 @@ import FilterIcon from "./icons/FilterIcon";
 import Select from "../ui/fields/select/Select";
 import ColorSelect from "../ui/fields/color/ColorSelect";
 import { PriceRange } from "../ui/fields/range/PriceRange";
+import Rating from "../ui/fields/rating/Rating";
 
 const ProductsSection = () => {
   const [openMenuFulter, setOpenMenuFulter] = useState(false);
@@ -68,7 +69,10 @@ const ProductsSection = () => {
               items={["Más Reciente", "Más Antiguo"]}
             />
 
-            <ColorSelect listcolors={["rojo", "azul", "verde", "blanco"]} />
+            <ColorSelect
+              onChange={(color) => console.log(color)}
+              listcolors={["rojo", "azul", "verde", "blanco"]}
+            />
 
             <PriceRange
               min={0}
@@ -77,40 +81,9 @@ const ProductsSection = () => {
               onChange={(range) => console.log(range)}
             />
 
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Marca
-              </label>
-              <select className="p-2 w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-emerald-300 focus:ring focus:ring-emerald-200 focus:ring-opacity-50">
-                <option>Marca A</option>
-                <option>Marca B</option>
-                <option>Marca C</option>
-              </select>
-            </div>
+            <Select title="Marca" items={["Marca A", "Marca B", "Marca C"]} />
 
-            <div>
-              <label className="block text-xs font-medium text-gray-600 mb-1">
-                Valoración
-              </label>
-              <div className="flex items-center space-x-1">
-                <button className="text-gray-300 hover:text-amber-400">
-                  <i className="fas fa-star"></i>
-                </button>
-                <button className="text-gray-300 hover:text-amber-400">
-                  <i className="fas fa-star"></i>
-                </button>
-                <button className="text-gray-300 hover:text-amber-400">
-                  <i className="fas fa-star"></i>
-                </button>
-                <button className="text-gray-300 hover:text-amber-400">
-                  <i className="fas fa-star"></i>
-                </button>
-                <button className="text-gray-300 hover:text-amber-400">
-                  <i className="fas fa-star"></i>
-                </button>
-                <span className="text-xs text-gray-500 ml-1">&amp; Up</span>
-              </div>
-            </div>
+            <Rating onChange={(rating) => console.log(rating)} />
           </div>
           <button className="w-auto py-2 px-4 m-4 bg-emerald-600 text-white rounded-md text-sm font-medium hover:bg-emerald-700 transition duration-150">
             Aplicar Filtros
