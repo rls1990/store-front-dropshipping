@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import StarIcon from "../../icons/StarIcon";
+import DeleteIcon from "../../icons/DeleteIcon";
 
 interface RatingProps {
   initialRating?: number;
@@ -28,7 +29,7 @@ export default function Rating({
   return (
     <div className="space-y-2">
       {label && <p className="text-sm font-medium text-gray-700">{label}</p>}
-      <div className="flex items-center">
+      <div className="flex items-center [&_button]:cursor-pointer">
         {[...Array(maxRating)].map((_, index) => {
           const ratingValue = index + 1;
           return (
@@ -53,18 +54,19 @@ export default function Rating({
             </button>
           );
         })}
-        {rating > 0 && (
-          <button
-            type="button"
-            onClick={() => {
-              setRating(0);
-              onChange?.(0);
-            }}
-            className="ml-2 text-sm text-gray-500 hover:text-gray-700"
-          >
-            Limpiar
-          </button>
-        )}
+
+        <button
+          onClick={() => {
+            setRating(0);
+            onChange?.(0);
+          }}
+          disabled={rating == 0}
+          className={`transition-all ${
+            rating > 0 ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <DeleteIcon />
+        </button>
       </div>
     </div>
   );
