@@ -67,6 +67,7 @@ const ProductsSection = () => {
             <Select
               title="Fecha de Publicación"
               items={["Más Reciente", "Más Antiguo"]}
+              onChange={(value) => console.log(value)}
             />
 
             <ColorSelect
@@ -81,7 +82,11 @@ const ProductsSection = () => {
               onChange={(range) => console.log(range)}
             />
 
-            <Select title="Marca" items={["Marca A", "Marca B", "Marca C"]} />
+            <Select
+              title="Marca"
+              items={["Marca A", "Marca B", "Marca C"]}
+              onChange={(value) => console.log(value)}
+            />
 
             <Rating onChange={(rating) => console.log(rating)} />
           </div>
