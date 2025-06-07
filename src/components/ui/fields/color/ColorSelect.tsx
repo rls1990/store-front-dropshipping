@@ -1,6 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
+import DeleteIcon from "../../icons/DeleteIcon";
 
 interface ColorSelectProps {
   listcolors: ("rojo" | "azul" | "verde" | "amarillo" | "negro" | "blanco")[];
@@ -92,6 +93,16 @@ const ColorSelect: FC<ColorSelectProps> = ({ listcolors, onChange }) => {
             }
           ></button>
         )}
+
+        <button
+          disabled={colorIndex == -1}
+          className={`transition-all ${
+            colorIndex != -1 ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setColorIndex(-1)}
+        >
+          <DeleteIcon />
+        </button>
       </div>
     </div>
   );
