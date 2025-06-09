@@ -1,6 +1,6 @@
 import AboutUs from "@/components/about-us/AboutUs";
 
-const AboutUsView = () => {
+const AboutUsPage = () => {
   return (
     <div>
       <AboutUs />
@@ -8,4 +8,4 @@ const AboutUsView = () => {
   );
 };
 
-export default AboutUsView;
+export default AboutUsPage;

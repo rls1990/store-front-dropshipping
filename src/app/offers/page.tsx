@@ -1,6 +1,6 @@
 import Offers from "@/components/offers/Offers";
 
-const OffersVew = () => {
+const OffersPage = () => {
   return (
     <div>
       <Offers />
@@ -8,4 +8,4 @@ const OffersVew = () => {
   );
 };
 
-export default OffersVew;
+export default OffersPage;
